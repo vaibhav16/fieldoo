@@ -96,6 +96,7 @@
 	/* Main Grid */
 	.ritekhed-main-content .col-md-4,.ritekhed-main-content .col-md-3 { margin-right: 0px; width: 100%; flex: 0 0 100%; max-width: 100%; }
 	.ritekhed-footer-widget .widget { margin-right: 0px; flex: 0 0 100%; max-width: 100%; }
+	.ritekhed-player-list figure .flip-card {width: 100%;min-height: 290px;}
 	.ritekhed-cart-box { width: 100%; }
 
 	/* Content */
