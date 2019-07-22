@@ -2668,7 +2668,7 @@ ul.ritekhed-table-list li .ritekhed-cell:nth-child(2) { width: 50%; }
     margin: 0px 0px 50px;
 }
 .ritekhed-player-list figure {
-    width: 268px;
+    width: 138px;
     float: left;
     margin: 0px;
 }
@@ -2689,13 +2689,13 @@ ul.ritekhed-table-list li .ritekhed-cell:nth-child(2) { width: 50%; }
     margin: -18px 0px 0px 0px;
 }
 .ritekhed-player-list figure ~ .ritekhed-player-list-text {
-    margin-left: 268px;
+    margin-left: 138px;
 }
 .ritekhed-player-list-text {
     background-color: #27282a;
-    padding: 26px 30px 0px 35px;
+    padding: 10px 10px 10px 30px;
     position: relative;
-    height: 277px;
+    height: 190px;
 
 }
 .ritekhed-forword-btn {
@@ -3599,7 +3599,7 @@ h6.fontStyle{
 }
 
 .passportIcon{
-    color: #ffffff;font-size: 34px;position: absolute;right: 30px;top: 0;
+    color: #ffffff !important;font-size: 34px;position: absolute;left: 30px;top: 0;
 }
 
 .ritekhed-player-list .fa-link:before{display: none;}
