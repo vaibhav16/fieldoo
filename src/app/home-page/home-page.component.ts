@@ -10,14 +10,17 @@ import { Players } from './../models/players.model';
 export class HomePageComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
-  playersData: Players;
+  playerData: Players;
+  baseUrl = "http://demos.sappleserve.com/fieldoo/backend/public/images";
 
   ngOnInit() {
+    console.log(this.baseUrl);
     this.dataService.getPlayers()
     .subscribe((res)=>{
       console.log(res);
-      this.playersData = res;
-      console.log(this.playersData);
+      this.playerData = res;
+      console.log(this.playerData.data[0]);
+      
     })
   }
 

@@ -1,5 +1,5 @@
 export class Players {
-    Player: Array<Player>
+    data: Array<Player>
 
 }
 
