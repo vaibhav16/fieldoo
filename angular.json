@@ -27,7 +27,20 @@
               "src/styles2.css"
               
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery.js",
+              "src/assets/js/popper.min.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/slick.slider.min.js",
+              "src/assets/js/fancybox.min.js",
+              "src/assets/js/isotope.min.js",
+              "src/assets/js/smartmenus.min.js",
+              "src/assets/js/progressbar.js",
+              "src/assets/js/counter.js",
+              "src/assets/js/jquery.countdown.min.js",
+              "src/assets/js/functions.js"
+              
+            ]
           },
           "configurations": {
             "production": {

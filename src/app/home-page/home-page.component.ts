@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from './../data.service';
+import { Players } from './../models/players.model';
 
 @Component({
   selector: 'app-home-page',
@@ -9,8 +10,15 @@ import { DataService } from './../data.service';
 export class HomePageComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
+  playersData: Players;
 
   ngOnInit() {
+    this.dataService.getPlayers()
+    .subscribe((res)=>{
+      console.log(res);
+      this.playersData = res;
+      console.log(this.playersData);
+    })
   }
 
   playerList(){
