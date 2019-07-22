@@ -36,8 +36,14 @@
     transform: rotateY(180deg);
   }
 
-  .flip-card-back span{display:inline-block; color:#ffdc11; text-align: center; text-decoration: underline;}
+  .flip-card-back span{display:inline-block; color:#ffdc11; text-align: left; text-decoration: underline; width:100px;}
   .flip-card-back span:nth-child(2){margin-top:68px;}
   .flip-card-front img{height:190px;}
   .flip-card-back .fa-user-plus{background: transparent;right: 0;color: #ffdc11; position: initial;padding: 0;margin-right: 5px !important;width: auto; margin:0px; height: auto;}
   .flip-card-back .fa-comment-dots{background: transparent;right: 0;color: #ffdc11; position: initial;padding: 0;margin-right: 5px !important;width: auto;margin:0px; height: auto;}
+
+  .playerImgBG{background-size:cover; background-repeat:no-repeat;height: 100%;width: 100%;background-position: top center;}
+  .playerImg1{background-image:url("/assets/images/player-list-img1.jpg");}
+  .playerImg2{background-image:url("/assets/images/player-list-img2.jpg");}
+  .playerImg3{background-image:url("/assets/images/player-list-img3.jpg");}
+  .playerImg4{background-image:url("/assets/images/player-list-img4.jpg");}

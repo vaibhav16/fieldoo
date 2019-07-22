@@ -12,14 +12,18 @@ export class HomePageComponent implements OnInit {
   constructor(private dataService: DataService) { }
   playerData: Players;
   baseUrl = "http://demos.sappleserve.com/fieldoo/backend/public/images";
+  fetchingData:boolean;
 
   ngOnInit() {
+    window.scroll(0,0);
+    this.fetchingData=true;
     console.log(this.baseUrl);
     this.dataService.getPlayers()
     .subscribe((res)=>{
       console.log(res);
       this.playerData = res;
       console.log(this.playerData.data[0]);
+      this.fetchingData=false;
       
     })
   }

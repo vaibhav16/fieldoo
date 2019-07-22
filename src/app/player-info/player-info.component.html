@@ -1,7 +1,7 @@
   <!-- <app-header></app-header> -->
 
   <!-- Content -->
-  <div class="ritekhed-main-content">
+  <div *ngIf="playerInfo" class="ritekhed-main-content">
 
     <!-- Main Section -->
     <div class="ritekhed-main-section ritekhed-player-thumb">
@@ -12,18 +12,18 @@
 
                 <div class="col-md-12">
                     <div class="ritekhed-player-thumb-wrap">
-                        <figure><img src="assets/images/player-list-img1.jpg" alt=""></figure>
+                        <figure><img src='{{baseUrl}}/{{playerInfo.photo}}' alt=""></figure>
                         <div class="ritekhed-player-thumb-text">
                             <h2>10</h2>
                             <h3>Darren <br><span> Stayen</span></h3>
                             <ul class="ritekhed-player-info">
                                 <li>
                                     <h5>Nationality:</h5>
-                                    <span>Benjamin Henrichs</span>
+                                    <span>{{playerInfo.country}}</span>
                                 </li>
                                 <li>
                                     <h5>Date Of Birth:</h5>
-                                    <span>August 21st 1995</span>
+                                    <span>{{playerInfo.dob | date:'short'}}</span>
                                 </li>
                                 <li>
                                     <h5>Points Per Game:</h5>
@@ -31,11 +31,11 @@
                                 </li>
                                 <li>
                                     <h5>Playing For:</h5>
-                                    <span>America</span>
+                                    <span>{{playerInfo.country}}</span>
                                 </li>
                                 <li>
                                     <h5>Height:</h5>
-                                    <span>6’10”</span>
+                                    <span>{{playerInfo.height}} CM</span>
                                 </li>
                                 <li>
                                     <h5>Rebounds:</h5>
@@ -47,11 +47,11 @@
                                 </li>
                                 <li>
                                     <h5>Weight:</h5>
-                                    <span>295 lbs</span>
+                                    <span>{{playerInfo.weight}} Kg</span>
                                 </li>
                                 <li>
                                     <h5>Age:</h5>
-                                    <span>19</span>
+                                    <span>{{playerInfo.age}}</span>
                                 </li>
                             </ul>
                         </div>
@@ -70,8 +70,12 @@
 
                 <!-- Content -->
                 <div class="col-md-9">
+
                     <div class="ritekhed-rich-editor">
-                        <h2>Player Description</h2>
+                        <h2>Player Description</h2>                
+                 
+                        <iframe width="420" height="345" [src]="getIframeUrl(playerInfo.promo_video)">
+                        </iframe>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus tempor consectet Sed vitae dignissim purus, eget aliquam libero. Duis et arcu a erat venenatis ornare eget nec urna. Nulla volutpat luctus venen Aliquam tellus dui, luctus nec ornare at, aliquet ac nulla. Quisque vitae feugiat eros. Pellentesque tempus tortor nec tellus elp ifend, id dictum nibh volutpat.</p>
                         <p>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condimentum odio. Suspendisse lacinia, risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna eu orci. Phasellus tempor consectetur magna, at efficiat est malesuada ac. Phasellus non ipsum diam. Suspendisse potenti.</p>
                         <blockquote>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condi Suspendisse lacinia, risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna ellus tempor consectetur magna.
@@ -210,4 +214,4 @@
 
 <!-- Content -->
 
-<!-- <app-footer></app-footer> -->
+<app-loader *ngIf="fetchingData"></app-loader>

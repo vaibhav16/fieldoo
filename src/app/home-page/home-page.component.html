@@ -6,36 +6,38 @@
     <div class="ritekhed-main-section">
         <div class="container">
             <div class="row">
-
                 <div *ngIf="playerData" class="col-md-12">
                     <!-- Player List -->
                     <div class="ritekhed-player ritekhed-player-list">
                         <ul class="row">
-                            <li *ngFor="let player of playerData.data" class="col-md-4">
-                                <figure><a [routerLink]="['/playerinfo']">
-                                    <div class="flip-card">
-                                        <div class="flip-card-inner">
-                                          <div class="flip-card-front">
-                                            <img src='{{baseUrl}}/{{player.photo}}' alt="">
-                                          </div>
-                                          <div class="flip-card-back">
-                                                <span title="EU Passport" class="fa fa-passport passportIcon"></span>
-                                            <span><i class="fas fa-user-plus"></i>Follow</span><br>
-                                            <span><i class='fas fa-comment-dots'></i>Message</span>
-                                          </div>
+                            <li *ngFor="let player of playerData.data" [routerLink]="['/playerinfo/',player.id]" class="col-md-4">
+                                <figure><a >
+                                        <div class="flip-card">
+                                            <div class="flip-card-inner">
+                                                <div class="flip-card-front">
+                                                    <div class="playerImgBG">
+                                                        <img src="{{baseUrl}}/{{player.photo}}" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="flip-card-back">
+                                                    <span title="EU Passport"
+                                                        class="fa fa-passport passportIcon"></span>
+                                                    <span><i class="fas fa-user-plus"></i>Follow</span><br>
+                                                    <span><i class='fas fa-comment-dots'></i>Message</span>
+                                                </div>
+                                            </div>
                                         </div>
-                                      </div>
-                                    <!--<img src="assets/images/player-list-img1.jpg" alt="">-->
-                                        <i title="Winger Left" class="fa fa-link">WL</i></a></figure>
+                                        <!--<img src="assets/images/player-list-img1.jpg" alt="">-->
+                                        <i title="Winger Left" class="fa fa-link">WL</i>
+                                    </a></figure>
                                 <div [routerLink]="['/playerinfo']" class="ritekhed-player-list-text">
                                     <a href="javascript:void(0);" class="ritekhed-forword-btn">YOUNG PLAYER</a>
-                                    <h5><a href="javascript:void(0);">{{player.name}} </a></h5>
-                                    <p>Free player, Seixal FC (4. division) , {{player.country}}</p>
-                                    <h6 class="fontStyle">{{player.country}} - 17 years / {{player.height}}</h6>
+                                    <h5><a href="javascript:void(0);">{{player.name}}</a></h5>
+                                    <p>{{player.dominatine_legs}}, {{player.position}}</p>
+                                    <h6 class="fontStyle">{{player.country}} - {{player.age}} / {{player.height}} CM
+                                    </h6>
                                 </div>
                             </li>
-
-                            
                         </ul>
                         <div class="clearfix"></div>
                     </div>
@@ -55,7 +57,6 @@
                     </div>
                     <!-- Pagination -->
                 </div>
-
             </div>
         </div>
     </div>
@@ -65,3 +66,5 @@
 <!-- Content -->
 <div class="clearfix"></div>
 <!-- <app-footer></app-footer> -->
+
+<app-loader *ngIf="fetchingData"></app-loader>

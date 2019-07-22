@@ -8,9 +8,9 @@ import { Error404Component } from './common/error404/error404.component';
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch: 'full'},
   {path:'home',component:HomePageComponent},
-  {path:'playerinfo',component:PlayerInfoComponent},
-  {path:'error404',component:Error404Component},
-  {path:'**',redirectTo:'error404',pathMatch: 'full'}
+  {path:'playerinfo/:id',component:PlayerInfoComponent},
+  {path:'error404',component:Error404Component}
+  // {path:'**',redirectTo:'error404',pathMatch: 'full'}
 ];
 
 @NgModule({
