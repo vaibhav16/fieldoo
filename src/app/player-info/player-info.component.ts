@@ -26,10 +26,9 @@ export class PlayerInfoComponent implements OnInit {
       this.id = +params['id']; // (+) converts string 'id' to a number
       console.log(this.id);
       this.dataService.getPlayerInfo(this.id).subscribe(
-        (res)=>{
-          console.log(res);
+        (res)=>{         
           this.playerInfo = res.data;
-          console.log(this.playerInfo);
+          console.log(this.playerInfo);          
           this.fetchingData=false;
         }
       );
@@ -38,8 +37,9 @@ export class PlayerInfoComponent implements OnInit {
 
   getIframeUrl(url: string){
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
-
   }
+
+
   
 
 }

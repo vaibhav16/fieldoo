@@ -27,4 +27,8 @@ export class DataService {
     return this.http.get(this.baseUrl+'/players/'+id);
   }
 
+  getCareerData(id:number):Observable<any>{
+    return this.http.get(this.baseUrl+'/players/career/'+id);
+  }
+
 }
