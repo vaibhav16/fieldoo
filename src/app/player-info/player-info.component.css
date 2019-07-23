@@ -245,3 +245,15 @@ figure {
     font-size: 10px;
     line-height: 1.2em;
 }
+
+@media (max-width: 1024px) {
+    .textCenter{text-align:center;}
+    .ritekhed-player-thumb-wrap figure{float:none; margin:0px auto;}
+    .ritekhed-player-thumb-text h2{float:none; display:none;}
+    .ritekhed-player-thumb-text h3{float:none; display:none;}
+    .ritekhed-player-info{text-align:left;}
+    .ritekhed-player-thumb-text{padding-left:0px; margin-top:20px;}
+}
+@media (max-width: 540px) {
+    .ritekhed-player-info li h5{display: inline-block;margin-right: 5px;width: 50%;}
+}

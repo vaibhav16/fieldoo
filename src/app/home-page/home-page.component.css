@@ -14,8 +14,9 @@
     transform-style: preserve-3d;
   }
   
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+  .flip-card:hover .flip-card-back {
+    /*transform: rotateY(180deg);*/
+    display:block;
   }
   
   .flip-card-front, .flip-card-back {
@@ -26,14 +27,14 @@
   }
   
   .flip-card-front {
-    background-color: #27282a;
+    background-color: #ededed;
     color: white;
   }
   
   .flip-card-back {
-    background-color: #27282a;
+    background-color: rgba(0,0,0,0.7);
     color: white;
-    transform: rotateY(180deg);
+    display:none;
   }
 
   .flip-card-back span{display:inline-block; color:#ffdc11; text-align: left; text-decoration: underline; width:100px;}
@@ -43,4 +44,11 @@
   .flip-card-back .fa-comment-dots{background: transparent;right: 0;color: #ffdc11; position: initial;padding: 0;margin-right: 5px !important;width: auto;margin:0px; height: auto;transform: initial;}
 
   .playerImgBG{background-size:cover; background-repeat:no-repeat;height: 100%;width: 100%;background-position: top center;}
+
+
+
+  @media (max-width: 540px) {
+  .playerImgBG img{float: none;
+    width: auto;}
+  }
   
