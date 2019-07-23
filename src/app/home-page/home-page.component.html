@@ -10,7 +10,10 @@
                     <!-- Player List -->
                     <div class="ritekhed-player ritekhed-player-list">
                         <ul class="row">
-                            <li *ngFor="let player of playerData.data" [routerLink]="['/playerinfo/',player.id]" class="col-md-4">
+                            <li *ngFor="let player of playerData.data | paginate: { itemsPerPage: 9, currentPage: p }" 
+                            [routerLink]="['/playerinfo/',player.id]" 
+                            
+                            class="col-md-4">
                                 <figure><a >
                                         <div class="flip-card">
                                             <div class="flip-card-inner">
@@ -43,6 +46,8 @@
                     </div>
                     <!-- Player List -->
                     <!-- Pagination -->
+
+                    <pagination-controls (pageChange)="p = $event"></pagination-controls>
                     <!-- <div class="ritekhed-pagination">
                         <ul class="page-numbers">
                             <li><a class="previous page-numbers" href="javascript:void(0);"><span aria-label="Next"><i

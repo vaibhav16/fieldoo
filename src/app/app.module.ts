@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './data.service';
 import { LoaderComponent } from './common/loader/loader.component';
 import { SafePipe } from './pipes/safe.pipe';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SafePipe } from './pipes/safe.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule    
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

@@ -13,6 +13,7 @@ export class HomePageComponent implements OnInit {
   playerData: Players;
   baseUrl = "http://demos.sappleserve.com/fieldoo/backend/public/images";
   fetchingData:boolean;
+  p: number = 1;
 
   ngOnInit() {
     window.scroll(0,0);
