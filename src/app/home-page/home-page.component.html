@@ -6,190 +6,36 @@
     <div class="ritekhed-main-section">
         <div class="container">
             <div class="row">
-
-                <div class="col-md-12">
+                <div *ngIf="playerData" class="col-md-12">
                     <!-- Player List -->
                     <div class="ritekhed-player ritekhed-player-list">
                         <ul class="row">
-                            <li class="col-md-4">
-                                <figure><a [routerLink]="['/playerinfo']">
-                                    <div class="flip-card">
-                                        <div class="flip-card-inner">
-                                          <div class="flip-card-front">
-                                            <div class="playerImgBG playerImg1"></div>
-                                          </div>
-                                          <div class="flip-card-back">
-                                                <span title="EU Passport" class="fa fa-passport passportIcon"></span>
-                                            <span><i class="fas fa-user-plus"></i>Follow</span><br>
-                                            <span><i class='fas fa-comment-dots'></i>Message</span>
-                                          </div>
+                            <li *ngFor="let player of playerData.data" [routerLink]="['/playerinfo/',player.id]" class="col-md-4">
+                                <figure><a >
+                                        <div class="flip-card">
+                                            <div class="flip-card-inner">
+                                                <div class="flip-card-front">
+                                                    <div class="playerImgBG">
+                                                        <img src="{{baseUrl}}/{{player.photo}}" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="flip-card-back">
+                                                    <span title="EU Passport"
+                                                        class="fa fa-passport passportIcon"></span>
+                                                    <span><i class="fas fa-user-plus"></i>Follow</span><br>
+                                                    <span><i class='fas fa-comment-dots'></i>Message</span>
+                                                </div>
+                                            </div>
                                         </div>
-                                      </div>
-                                    <!--<img src="assets/images/player-list-img1.jpg" alt="">-->
-                                        <i title="Winger Left" class="fa fa-link">WL</i></a></figure>
+                                        <!--<img src="assets/images/player-list-img1.jpg" alt="">-->
+                                        <i title="Winger Left" class="fa fa-link">WL</i>
+                                    </a></figure>
                                 <div [routerLink]="['/playerinfo']" class="ritekhed-player-list-text">
                                     <a href="javascript:void(0);" class="ritekhed-forword-btn">YOUNG PLAYER</a>
-                                    <h5><a href="javascript:void(0);">João Gomes </a></h5>
-                                    <p>Free player, Seixal FC (4. division) , Portugal</p>
-                                    <h6 class="fontStyle">Portugal - 17 years / 169 cm </h6>
-                                </div>
-                            </li>
-                            <li class="col-md-4">
-                                <figure><a href="player-info.html">
-                                        <div class="flip-card">
-                                                <div class="flip-card-inner">
-                                                  <div class="flip-card-front">
-                                                    <div class="playerImgBG playerImg2"></div>
-                                                  </div>
-                                                  <div class="flip-card-back">
-                                                        <span class="passportIcon"></span>
-                                                        <span><i class="fas fa-user-plus"></i>Follow</span><br>
-                                                        <span><i class='fas fa-comment-dots'></i>Message</span>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                    <i title="Midfielder Right" class="fa fa-link">MR</i></a></figure>
-                                <div class="ritekhed-player-list-text">
-                                    <a href="player-info.html" class="ritekhed-forword-btn">YOUTH NATIONAL TEAM
-                                        PLAYER</a>
-                                    <h5><a href="player-info.html">Sarena jullie</a></h5>
-                                    <p>Free player, Seixal FC (4. division) , Portugal</p>
-                                    <h6 class="fontStyle">Portugal - 17 years / 169 cm </h6>
-                                </div>
-                            </li>
-                            <li class="col-md-4">
-                                <figure><a href="player-info.html">
-                                        <div class="flip-card">
-                                                <div class="flip-card-inner">
-                                                  <div class="flip-card-front">
-                                                    <div class="playerImgBG playerImg3"></div>
-                                                  </div>
-                                                  <div class="flip-card-back">
-                                                        <span title="EU Passport" class="fa fa-passport passportIcon"></span>
-                                                        <span><i class="fas fa-user-plus"></i>Follow</span><br>
-                                                        <span><i class='fas fa-comment-dots'></i>Message</span>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                    <i title="Midfielder Defensive" class="fa fa-link">MD</i></a>
-                                </figure>
-                                <div class="ritekhed-player-list-text">
-                                    <a href="player-info.html" class="ritekhed-forword-btn">"A" NATIONAL TEAM PLAYER</a>
-                                    <h5><a href="player-info.html">Chris Morris</a></h5>
-                                    <p>Free player, Seixal FC (4. division) , Portugal</p>
-                                    <h6 class="fontStyle">Portugal - 17 years / 169 cm </h6>
-                                </div>
-                            </li>
-                            <li class="col-md-4">
-                                <figure><a href="player-info.html">
-                                        <div class="flip-card">
-                                                <div class="flip-card-inner">
-                                                  <div class="flip-card-front">
-                                                    <div class="playerImgBG playerImg4"></div>
-                                                  </div>
-                                                  <div class="flip-card-back">
-                                                        <span title="EU Passport" class="fa fa-passport passportIcon"></span>
-                                                        <span><i class="fas fa-user-plus"></i>Follow</span><br>
-                                                        <span><i class='fas fa-comment-dots'></i>Message</span>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                    <i title="Goalkeeper" class="fa fa-link">G</i></a></figure>
-                                <div class="ritekhed-player-list-text">
-                                    <a href="player-info.html" class="ritekhed-forword-btn">CURRENT 1. DIVISION
-                                        PLAYER</a>
-                                    <h5><a href="player-info.html">Sophie james</a></h5>
-                                    <p>Free player, Seixal FC (4. division) , Portugal</p>
-                                    <h6 class="fontStyle">Portugal - 17 years / 169 cm </h6>
-                                </div>
-                            </li>
-                            <li class="col-md-4">
-                                <figure><a href="player-info.html">
-                                        <div class="flip-card">
-                                                <div class="flip-card-inner">
-                                                  <div class="flip-card-front">
-                                                    <div class="playerImgBG playerImg1"></div>
-                                                  </div>
-                                                  <div class="flip-card-back">
-                                                        <span class="passportIcon"></span>
-                                                        <span><i class="fas fa-user-plus"></i>Follow</span><br>
-                                                        <span><i class='fas fa-comment-dots'></i>Message</span>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                    <i title="Midfielder Left" class="fa fa-link">ML</i></a></figure>
-                                <div class="ritekhed-player-list-text">
-                                    <a href="player-info.html" class="ritekhed-forword-btn">1. DIVISION PLAYER</a>
-                                    <h5><a href="player-info.html">Brad Haddin</a></h5>
-                                    <p>Free player, Seixal FC (4. division) , Portugal</p>
-                                    <h6 class="fontStyle">Portugal - 17 years / 169 cm </h6>
-                                </div>
-                            </li>
-                            <li class="col-md-4">
-                                <figure><a href="player-info.html">
-                                        <div class="flip-card">
-                                                <div class="flip-card-inner">
-                                                  <div class="flip-card-front">
-                                                    <div class="playerImgBG playerImg2"></div>
-                                                  </div>
-                                                  <div class="flip-card-back">
-                                                        <span class="passportIcon"></span>
-                                                        <span><i class="fas fa-user-plus"></i>Follow</span><br>
-                                                        <span><i class='fas fa-comment-dots'></i>Message</span>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                    <i title="Defender Right" class="fa fa-link">DR</i></a></figure>
-                                <div class="ritekhed-player-list-text">
-                                    <a href="player-info.html" class="ritekhed-forword-btn">1. DIVISION PLAYER</a>
-                                    <h5><a href="player-info.html">Darren Layfield</a></h5>
-                                    <p>Free player, Seixal FC (4. division) , Portugal</p>
-                                    <h6 class="fontStyle">Portugal - 17 years / 169 cm </h6>
-                                </div>
-                            </li>
-                            <li class="col-md-4">
-                                <figure><a href="player-info.html">
-                                        <div class="flip-card">
-                                                <div class="flip-card-inner">
-                                                  <div class="flip-card-front">
-                                                    <div class="playerImgBG playerImg3"></div>
-                                                  </div>
-                                                  <div class="flip-card-back">
-                                                        <span title="EU Passport" class="fa fa-passport passportIcon"></span>
-                                                        <span><i class="fas fa-user-plus"></i>Follow</span><br>
-                                                        <span><i class='fas fa-comment-dots'></i>Message</span>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                    <i title="Midfielder Center" class="fa fa-link">MC</i></a></figure>
-                                <div class="ritekhed-player-list-text">
-                                    <a href="player-info.html" class="ritekhed-forword-btn">1. DIVISION PLAYER </a>
-                                    <h5><a href="player-info.html">Darren Layfield</a></h5>
-                                    <p>Free player, Seixal FC (4. division) , Portugal</p>
-                                    <h6 class="fontStyle">Portugal - 17 years / 169 cm </h6>
-                                </div>
-                            </li>
-                            <li class="col-md-4">
-                                <figure><a href="player-info.html">
-                                        <div class="flip-card">
-                                                <div class="flip-card-inner">
-                                                  <div class="flip-card-front">
-                                                    <div class="playerImgBG playerImg4"></div>
-                                                  </div>
-                                                  <div class="flip-card-back">
-                                                      <span class="passportIcon"></span>
-                                                      <span><i class="fas fa-user-plus"></i>Follow</span><br>
-                                                      <span><i class='fas fa-comment-dots'></i>Message</span>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                    <i title="Goalkeeper" class="fa fa-link">G</i></a></figure>
-                                <div class="ritekhed-player-list-text">
-                                    <a href="player-info.html" class="ritekhed-forword-btn">CURRENT 1. DIVISION PLAYER
-                                    </a>
-                                    <h5><a href="player-info.html">Darren Layfield</a></h5>
-                                    <p>Free player, Seixal FC (4. division) , Portugal</p>
-                                    <h6 class="fontStyle">Portugal - 17 years / 169 cm </h6>
+                                    <h5><a href="javascript:void(0);">{{player.name}}</a></h5>
+                                    <p>{{player.dominante_legs}}, {{player.position}}</p>
+                                    <h6 class="fontStyle">{{player.country}} - {{player.age}} / {{player.height}} CM
+                                    </h6>
                                 </div>
                             </li>
                         </ul>
@@ -197,7 +43,7 @@
                     </div>
                     <!-- Player List -->
                     <!-- Pagination -->
-                    <div class="ritekhed-pagination">
+                    <!-- <div class="ritekhed-pagination">
                         <ul class="page-numbers">
                             <li><a class="previous page-numbers" href="javascript:void(0);"><span aria-label="Next"><i
                                             class="fa fa-angle-left"></i></span></a></li>
@@ -208,10 +54,9 @@
                             <li><a class="next page-numbers" href="javascript:void(0);"><span aria-label="Next"><i
                                             class="fa fa-angle-right"></i></span></a></li>
                         </ul>
-                    </div>
+                    </div> -->
                     <!-- Pagination -->
                 </div>
-
             </div>
         </div>
     </div>
@@ -221,3 +66,5 @@
 <!-- Content -->
 <div class="clearfix"></div>
 <!-- <app-footer></app-footer> -->
+
+<app-loader *ngIf="fetchingData"></app-loader>

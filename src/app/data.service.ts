@@ -23,4 +23,8 @@ export class DataService {
     return this.http.get(this.baseUrl+'/players');
   }
 
+  getPlayerInfo(id:number):Observable<any>{
+    return this.http.get(this.baseUrl+'/players/'+id);
+  }
+
 }

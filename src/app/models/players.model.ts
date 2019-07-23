@@ -1,5 +1,5 @@
 export class Players {
-    Player: Array<Player>
+    data: Array<Player>
 
 }
 
@@ -20,4 +20,6 @@ export class Player {
     promo_video: string;
     state: string;
     updated_at: string;
+    weight:string;
+    age:string;
 }
