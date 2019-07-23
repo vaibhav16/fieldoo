@@ -27,7 +27,7 @@
   }
   
   .flip-card-front {
-    background-color: #27282a;
+    background-color: #ededed;
     color: white;
   }
   
@@ -44,4 +44,11 @@
   .flip-card-back .fa-comment-dots{background: transparent;right: 0;color: #ffdc11; position: initial;padding: 0;margin-right: 5px !important;width: auto;margin:0px; height: auto;transform: initial;}
 
   .playerImgBG{background-size:cover; background-repeat:no-repeat;height: 100%;width: 100%;background-position: top center;}
+
+
+
+  @media (max-width: 540px) {
+  .playerImgBG img{float: none;
+    width: auto;}
+  }
   
