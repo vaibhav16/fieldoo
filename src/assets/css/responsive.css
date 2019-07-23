@@ -76,7 +76,7 @@
 	.ritekhed-player-list figure ~ .ritekhed-player-list-text { margin-left: 0px; float: left; width: 100%; }
 	.ritekhed-player-list figure { width: 100%; }
 	.ritekhed-player-list figure .flip-card{width: 100%;}
-	.ritekhed-player-list figure a i { top: auto; bottom: -22px; right: 50%; }
+	.ritekhed-player-list figure a i { top: auto; bottom: -22px; right: 50%; transform: translateX(50%);}
 	.ritekhed-player-thumb-text { width: 100%; margin-left: 0px; }
 	.ritekhed-shop-summery { width: 100%; }
 
@@ -98,6 +98,7 @@
 	.ritekhed-footer-widget .widget { margin-right: 0px; flex: 0 0 100%; max-width: 100%; }
 	.ritekhed-player-list figure .flip-card {width: 100%;min-height: 290px;}
 	.ritekhed-cart-box { width: 100%; }
+	.flip-card-front img{height:290px !important;}
 
 	/* Content */
 	.ritekhed-match-fixture { overflow: scroll; }

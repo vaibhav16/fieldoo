@@ -3454,7 +3454,7 @@ li:hover .ritekhed-gallery-classic-text {
 /*Flicker Images*/
 .ritekhed-main-content .widget_gallery ul li {
     float: left;
-    width: 33.333%;
+    width: 25%;
 }
 .ritekhed-main-content .widget_gallery ul li a:before {
     background-color: #27282a;
