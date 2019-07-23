@@ -72,12 +72,53 @@
                 <div class="col-md-8">
 
                     <div class="ritekhed-rich-editor">
-                        <h2>PROMO VIDEO</h2>   
+                            <div class="ritekhed-widget-heading"><h2>Promo Videos</h2></div>  
                         <iframe width="420" height="345" [src]="getIframeUrl(playerInfo.promo_video)">
                         </iframe>
                     </div>
                     <div class="clearfix"></div>
                      <!-- Last Game Log -->
+                     <div class="card card--has-table">
+                            <div class="card__header card__header--has-btn">
+                                <h4>League</h4>
+                                <!--<a href="_soccer_player-stats.html" class="btn btn-default btn-outline btn-xs card-header__button">See complete games log</a>-->
+                            </div>
+                            <div class="card__content">
+                                <div class="table-responsive">
+                                    <table class="table table-hover game-player-result">
+                                        <thead>
+                                            <tr>
+                                                <th class="game-player-result__date">Season</th>
+                                                <th class="game-player-result__vs">Team</th>
+                                                <th class="game-player-result__date">Country</th>
+                                                <th class="game-player-result__score">Category</th>
+                                                <th class="game-player-result__played">Matches</th>
+                                                <th class="game-player-result__tg">Goals</th>
+                                                <th class="game-player-result__ts">Assists</th>
+                                                <th class="game-player-result__min">Yellow Cards</th>
+                                                <th class="game-player-result__min">Red Cards</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="game-player-result__date">2019</td>
+                                                <td class="game-player-result__vs">Ngongotaha AFC</td>
+                                                <td class="game-player-result__score">New Zealand</td>
+                                                    <td class="game-player-result__played">Regional league</td>
+                                                    <td class="game-player-result__min">9</td>
+                                                    <td class="game-player-result__tg">1</td>
+                                                    <td class="game-player-result__ts">0</td>
+                                                    <td class="game-player-result__ts">0</td>
+                                                    <td class="game-player-result__ts">0</td>
+                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
                      <div class="card card--has-table">
                             <div class="card__header card__header--has-btn">
                                 <h4>LATEST MATCH</h4>
@@ -91,6 +132,7 @@
                                                 <th class="game-player-result__date">Date</th>
                                                 <th class="game-player-result__vs">Versus</th>
                                                 <th class="game-player-result__score">Score</th>
+                                                <th class="game-player-result__played">Played</th>
                                                 <th class="game-player-result__min">Playing Time</th>
                                                 <th class="game-player-result__tg">Goals</th>
                                                 <th class="game-player-result__ts">Assists</th>
@@ -98,7 +140,7 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td class="game-player-result__date">Sat, Mar 10</td>
+                                                <td class="game-player-result__date">Jan 1, 2019</td>
                                                 <td class="game-player-result__vs">
                                                     <div class="team-meta">
                                                         <figure class="team-meta__logo">
@@ -112,12 +154,13 @@
                                                 </td>
                                                 <td class="game-player-result__score">
                                                     <span class="game-player-result__game">W</span> 2-0</td>
+                                                    <td class="game-player-result__played">Off-team</td>
                                                     <td class="game-player-result__min">56</td>
                                                     <td class="game-player-result__tg">1</td>
                                                     <td class="game-player-result__ts">12</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="game-player-result__date">Fri, Mar 16</td>
+                                                    <td class="game-player-result__date">Jan 1, 2019</td>
                                                     <td class="game-player-result__vs">
                                                         <div class="team-meta">
                                                             <figure class="team-meta__logo">
@@ -131,12 +174,13 @@
                                                     </td>
                                                     <td class="game-player-result__score">
                                                         <span class="game-player-result__game">L</span> 4-2</td>
+                                                        <td class="game-player-result__played">Off-team</td>
                                                         <td class="game-player-result__min">42</td>
                                                         <td class="game-player-result__tg">0</td>
                                                         <td class="game-player-result__ts">14</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="game-player-result__date">Sat, Mar 24</td>
+                                                        <td class="game-player-result__date">May 25, 2019</td>
                                                         <td class="game-player-result__vs">
                                                             <div class="team-meta">
                                                                 <figure class="team-meta__logo">
@@ -150,12 +194,13 @@
                                                         </td>
                                                         <td class="game-player-result__score">
                                                             <span class="game-player-result__game">D</span> 0-0</td>
+                                                            <td class="game-player-result__played">Starter</td>
                                                             <td class="game-player-result__min">47</td>
                                                             <td class="game-player-result__tg">2</td>
                                                             <td class="game-player-result__ts">22</td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="game-player-result__date">Fri, Mar 4</td>
+                                                            <td class="game-player-result__date">May 18, 2019</td>
                                                             <td class="game-player-result__vs">
                                                                 <div class="team-meta">
                                                                     <figure class="team-meta__logo">
@@ -169,12 +214,13 @@
                                                             </td>
                                                             <td class="game-player-result__score">
                                                                 <span class="game-player-result__game">W</span> 2-3</td>
+                                                                <td class="game-player-result__played">Off-team</td>
                                                                 <td class="game-player-result__min">69</td>
                                                                 <td class="game-player-result__tg">0</td>
                                                                 <td class="game-player-result__ts">18</td>
                                                             </tr>
                                                             <tr>
-                                                                <td class="game-player-result__date">Sat, Feb 29</td>
+                                                                <td class="game-player-result__date">May 15, 2019</td>
                                                                 <td class="game-player-result__vs">
                                                                     <div class="team-meta">
                                                                         <figure class="team-meta__logo">
@@ -188,6 +234,7 @@
                                                                 </td>
                                                                 <td class="game-player-result__score">
                                                                     <span class="game-player-result__game">W</span> 2-1</td>
+                                                                    <td class="game-player-result__played">Starter</td>
                                                                     <td class="game-player-result__min">73</td>
                                                                     <td class="game-player-result__tg">1</td>
                                                                     <td class="game-player-result__ts">13</td>
@@ -204,20 +251,11 @@
 
                 <!-- SideBaar -->
                 <aside class="col-md-4">
+
                     <!-- Widget PapularPost -->
                     <div class="widget widget_popular_post">
                         <div class="ritekhed-widget-heading"><h2>Popular Posts</h2></div>
                         <ul>
-                            <li>
-                                <div class="ritekhed-popular-post">
-                                    <figure><a href="#"><img src="assets/images/widget-gallery-1.jpg" alt=""></a></figure>
-                                    <div class="ritekhed-popular-post-text">
-                                        <h5><a href="#">Mark Johnson has as acture and is</a></h5>
-                                        <time datetime="2008-02-14 20:00">August 23rd, 2016</time>
-                                    </div>
-                                    <span></span>
-                                </div>
-                            </li>
                             <li>
                                 <div class="ritekhed-popular-post">
                                     <figure><a href="#"><img src="assets/images/widget-gallery-7.jpg" alt=""></a></figure>
@@ -254,10 +292,9 @@
 
                     <!-- Widget Cetagories -->
                     <div class="widget widget_cetagories">
-                        <div class="ritekhed-widget-heading"><h2>Cetagories</h2></div>
+                        <div class="ritekhed-widget-heading"><h2>Categories</h2></div>
                         <ul>
                             <li><a href="#">Championship <span>( 13 )</span></a></li>
-                            <li><a href="#">Super Ball <span>( 12 )</span></a></li>
                             <li><a href="#">Worldcup <span>( 04 )</span></a></li>
                             <li><a href="#">Club <span>( 08 )</span></a></li>
                             <li><a href="#">Stadium <span>( 13 )</span></a></li>
@@ -265,22 +302,26 @@
                     </div>
                     <!-- Widget Cetagories -->
 
+
                     <!-- Widget Gallery -->
                     <div class="widget widget_gallery">
-                        <div class="ritekhed-widget-heading"><h2>Photos</h2></div>
-                        <ul>
-                            <li><a data-fancybox-group="group" href="javascript:void(0);" class="fancybox"><img src="assets/images/widget-gallery-1.jpg" alt=""><i class="fa fa-angle-double-right"></i></a></li>
-                            <li><a data-fancybox-group="group" href="javascript:void(0);" class="fancybox"><img src="assets/images/widget-gallery-2.jpg" alt=""><i class="fa fa-angle-double-right"></i></a></li>
-                            <li><a data-fancybox-group="group" href="javascript:void(0);" class="fancybox"><img src="assets/images/widget-gallery-3.jpg" alt=""><i class="fa fa-angle-double-right"></i></a></li>
-                            <li><a data-fancybox-group="group" href="javascript:void(0);" class="fancybox"><img src="assets/images/widget-gallery-4.jpg" alt=""><i class="fa fa-angle-double-right"></i></a></li>
-                            <li><a data-fancybox-group="group" href="javascript:void(0);" class="fancybox"><img src="assets/images/widget-gallery-5.jpg" alt=""><i class="fa fa-angle-double-right"></i></a></li>
-                            <li><a data-fancybox-group="group" href="javascript:void(0);" class="fancybox"><img src="assets/images/widget-gallery-6.jpg" alt=""><i class="fa fa-angle-double-right"></i></a></li>
-                            <li><a data-fancybox-group="group" href="javascript:void(0);" class="fancybox"><img src="assets/images/widget-gallery-7.jpg" alt=""><i class="fa fa-angle-double-right"></i></a></li>
-                            <li><a data-fancybox-group="group" href="javascript:void(0);" class="fancybox"><img src="assets/images/widget-gallery-8.jpg" alt=""><i class="fa fa-angle-double-right"></i></a></li>
-                            <li><a data-fancybox-group="group" href="javascript:void(0);" class="fancybox"><img src="assets/images/widget-gallery-1.jpg" alt=""><i class="fa fa-angle-double-right"></i></a></li>
-                        </ul>
-                    </div>
-                    <!-- Widget Gallery -->
+                            <div class="ritekhed-widget-heading"><h2>Photos</h2></div>
+                            <ul>
+                                <li><a data-fancybox-group="group" href="javascript:void(0);" class="fancybox"><img src="assets/images/widget-gallery-1.jpg" alt=""><i class="fa fa-angle-double-right"></i></a></li>
+                                <li><a data-fancybox-group="group" href="javascript:void(0);" class="fancybox"><img src="assets/images/widget-gallery-2.jpg" alt=""><i class="fa fa-angle-double-right"></i></a></li>
+                                <li><a data-fancybox-group="group" href="javascript:void(0);" class="fancybox"><img src="assets/images/widget-gallery-3.jpg" alt=""><i class="fa fa-angle-double-right"></i></a></li>
+                                <li><a data-fancybox-group="group" href="javascript:void(0);" class="fancybox"><img src="assets/images/widget-gallery-4.jpg" alt=""><i class="fa fa-angle-double-right"></i></a></li>
+                                <li><a data-fancybox-group="group" href="javascript:void(0);" class="fancybox"><img src="assets/images/widget-gallery-5.jpg" alt=""><i class="fa fa-angle-double-right"></i></a></li>
+                                <li><a data-fancybox-group="group" href="javascript:void(0);" class="fancybox"><img src="assets/images/widget-gallery-6.jpg" alt=""><i class="fa fa-angle-double-right"></i></a></li>
+                                <li><a data-fancybox-group="group" href="javascript:void(0);" class="fancybox"><img src="assets/images/widget-gallery-7.jpg" alt=""><i class="fa fa-angle-double-right"></i></a></li>
+                                <li><a data-fancybox-group="group" href="javascript:void(0);" class="fancybox"><img src="assets/images/widget-gallery-8.jpg" alt=""><i class="fa fa-angle-double-right"></i></a></li>
+                                
+                            </ul>
+                        </div>
+                        <!-- Widget Gallery -->
+
+
+                    
 
 
                 </aside>

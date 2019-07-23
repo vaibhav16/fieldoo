@@ -38,6 +38,7 @@
     margin-bottom: 0;
     text-transform: uppercase;
     font-style: normal;
+    color: #fff;
 }
 .card--has-table h1, .card--has-table h2, .card--has-table h3, .card--has-table h4, .card--has-table h5, .card--has-table h6 {
     color: #fff;
@@ -149,4 +150,98 @@ figure {
 }
 .game-player-result .game-player-result__game {
     color: #fff;
+}
+
+.widget--sidebar {
+    margin-bottom: 15px;
+}
+.widget__title {
+    text-transform: uppercase;
+}
+
+.widget-player__details {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    border-color: hsla(0,0%,100%,.05);
+    margin: -1px;
+}
+.widget-player__details__item:first-child {
+    border-left: none;
+}
+@media (min-width: 1200px){
+.widget-player__details__item {
+    padding: 12px 24px;
+}
+}
+
+@media (min-width: 992px){
+.widget-player__details__item {
+    padding: 6px 12px;
+}
+}
+.widget-player__details__item {
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+    max-width: 50%;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: hsla(0,0%,100%,.05);
+    padding: 8px 12px;
+}
+.widget-player__details-desc-wrapper {
+    display: table;
+    width: 100%;
+}
+
+.widget-player__details-holder {
+    display: table-cell;
+    vertical-align: middle;
+    width: 70%;
+}
+
+@media (min-width: 992px){
+.widget-player__details-label {
+    font-size: 12px;
+}
+}
+.widget-player__details-label {
+    display: block;
+    font-family: Montserrat,sans-serif;
+    color: #fff;
+    font-size: 10px;
+    line-height: 1.2em;
+}
+
+@media (min-width: 992px){
+.widget-player__details-desc {
+    font-size: 9px;
+}
+}
+
+.widget-player__details-desc {
+    display: block;
+    line-height: 1.2em;
+    font-family: Montserrat,sans-serif;
+    font-size: 8px;
+    color: #9a9da2;
+}
+
+@media (min-width: 992px){
+.widget-player__details-value {
+    font-size: 11px;
+}
+}
+.widget-player__details-value {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    width: 30%;
+    font-family: Montserrat,sans-serif;
+    color: #fff;
+    font-size: 10px;
+    line-height: 1.2em;
 }
